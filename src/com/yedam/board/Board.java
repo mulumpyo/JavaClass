@@ -55,10 +55,10 @@ public class Board {
 		System.out.printf("%3d %20s %6s\n" ,boardNo ,title ,writer);
 	}
 	
-	public void showAllInfo() {
+	public String showAllInfo() {
 		String strFormat = "\n글번호 : %d    작성자 : %s\n";
 		strFormat += "제목: %s\n";
-		strFormat += "======== 내용 ========\n%s\n\n";
-		System.out.printf(strFormat, boardNo, writer, title, content);
+		strFormat += "================== 내용 ==================\n%s\n\n";
+		return strFormat + "," + boardNo + writer + title + content;
 	}
 }
